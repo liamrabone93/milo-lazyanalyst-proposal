@@ -94,6 +94,37 @@ h1 .hl{color:transparent;background:linear-gradient(90deg,var(--teal),var(--mint
 .feat-card h4{font-size:.95rem;font-weight:600;margin-bottom:7px;color:var(--ink)}
 .feat-card p{font-size:.82rem;color:var(--muted);line-height:1.6}
 
+/* ─── DASHBOARD ──────────────────────────────────────── */
+.dash-win{background:#fff;border:1px solid var(--card-line);border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(18,40,44,.12);max-width:920px;margin:8px auto 0;color:var(--ink)}
+.dash-bar{background:#fff;padding:16px 20px;border-bottom:1px solid var(--line);display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.dash-bar h5{font-size:.98rem;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:3px}
+.dash-bar p{font-size:.72rem;color:var(--muted);line-height:1.4;max-width:440px}
+.dash-ask{flex-shrink:0;background:linear-gradient(90deg,var(--teal),var(--mint));color:#fff;border:none;border-radius:9px;padding:8px 14px;font-size:.74rem;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.dash-tabs{display:flex;gap:20px;padding:0 20px;background:#fff;border-bottom:1px solid var(--line)}
+.dash-tab{font-size:.76rem;font-weight:600;color:var(--muted);padding:11px 2px;border-bottom:2px solid transparent}
+.dash-tab.on{color:var(--teal);border-bottom-color:var(--teal)}
+.dash-body{padding:16px;background:var(--bg-soft)}
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}
+@media(max-width:640px){.kpi-row{grid-template-columns:1fr 1fr}}
+.kpi{background:#fff;border:1px solid var(--card-line);border-radius:12px;padding:14px 15px}
+.kpi .kl{font-size:.68rem;font-weight:600;color:var(--muted);margin-bottom:8px;line-height:1.2}
+.kpi .kv{font-family:'Fraunces',Georgia,serif;font-size:1.55rem;font-weight:300;color:var(--ink);line-height:1;margin-bottom:6px}
+.kpi .kd{font-size:.68rem;font-weight:700;display:inline-flex;align-items:center;gap:3px}
+.kpi .kd.up{color:#12886a}.kpi .kd.down{color:#dc2626}
+.dash-charts{display:grid;grid-template-columns:1.5fr 1fr;gap:12px;margin-bottom:14px}
+@media(max-width:640px){.dash-charts{grid-template-columns:1fr}}
+.dchart{background:#fff;border:1px solid var(--card-line);border-radius:12px;padding:14px 15px}
+.dchart h6{font-size:.78rem;font-weight:700;color:var(--ink);margin-bottom:2px}
+.dchart .dsub{font-size:.66rem;color:var(--dim);margin-bottom:12px}
+.dchart svg{width:100%;height:auto;display:block}
+.dlegend{display:flex;flex-wrap:wrap;gap:10px 14px;margin-top:10px}
+.dlegend span{font-size:.66rem;color:var(--body);display:inline-flex;align-items:center;gap:5px}
+.dlegend i{width:9px;height:9px;border-radius:2px;display:inline-block}
+.dflow{background:#fff;border:1px solid var(--card-line);border-radius:12px;padding:14px 15px}
+.dflow h6{font-size:.78rem;font-weight:700;color:var(--ink);margin-bottom:2px}
+.dflow .dsub{font-size:.66rem;color:var(--dim);margin-bottom:10px}
+.dash-cap{text-align:center;font-size:.75rem;color:var(--dim);margin-top:16px;letter-spacing:.02em}
+
 /* ─── STACK / TOOL CATEGORIES ────────────────────────── */
 .stack-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:8px}
 @media(max-width:760px){.stack-grid{grid-template-columns:1fr}}
@@ -361,6 +392,80 @@ h1 .hl{color:transparent;background:linear-gradient(90deg,var(--teal),var(--mint
   </div>
 </div>
 
+<!-- ── DASHBOARDS ─────────────────────────────────────── -->
+<div class="section reveal" style="padding-top:0">
+  <div class="sec-label">Dashboards</div>
+  <div class="sec-title">Dashboards as well as chat.</div>
+  <div class="sec-sub">Alongside plain-English chat, Milo gives each client reusable, always-current dashboards — the consistent daily reporting views a team relies on, across every connected source.</div>
+
+  <div class="dash-win">
+    <div class="dash-bar">
+      <div>
+        <h5>Ecommerce Revenue Intelligence</h5>
+        <p>Executive KPIs, revenue trend, channel mix and channel-to-region flow, refreshed live from every connected source.</p>
+      </div>
+      <button class="dash-ask">💬 Ask Milo</button>
+    </div>
+    <div class="dash-tabs">
+      <div class="dash-tab on">Executive Overview</div>
+      <div class="dash-tab">Product Deep Dive</div>
+      <div class="dash-tab">Channels &amp; Regions</div>
+    </div>
+    <div class="dash-body">
+      <div class="kpi-row">
+        <div class="kpi"><div class="kl">Total Revenue</div><div class="kv">£4.2M</div><div class="kd up">▲ 12.4% vs. prior year</div></div>
+        <div class="kpi"><div class="kl">Total Transactions</div><div class="kv">128k</div><div class="kd up">▲ 8.1% vs. prior year</div></div>
+        <div class="kpi"><div class="kl">Gross Margin</div><div class="kv">56%</div><div class="kd up">▲ 1.5 pts vs. prior year</div></div>
+        <div class="kpi"><div class="kl">Avg Revenue / Order</div><div class="kv">£48</div><div class="kd up">▲ 4.2% vs. prior year</div></div>
+      </div>
+
+      <div class="dash-charts">
+        <div class="dchart">
+          <h6>Revenue &amp; Gross Profit Trend</h6>
+          <div class="dsub">Monthly revenue and gross profit over the selected period</div>
+          <svg viewBox="0 0 520 200" preserveAspectRatio="none" role="img" aria-label="Revenue and gross profit trend">
+            <defs>
+              <linearGradient id="gRev" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0c8484" stop-opacity=".6"/><stop offset="1" stop-color="#0c8484" stop-opacity=".1"/></linearGradient>
+              <linearGradient id="gGp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0a94b" stop-opacity=".75"/><stop offset="1" stop-color="#f0a94b" stop-opacity=".16"/></linearGradient>
+            </defs>
+            <line x1="40" y1="15" x2="500" y2="15" stroke="#eef2f2"/><line x1="40" y1="55" x2="500" y2="55" stroke="#eef2f2"/><line x1="40" y1="95" x2="500" y2="95" stroke="#eef2f2"/><line x1="40" y1="135" x2="500" y2="135" stroke="#eef2f2"/><line x1="40" y1="175" x2="500" y2="175" stroke="#e4eded"/>
+            <path d="M40,106.4 L132,100.7 L224,96.9 L316,91.2 L408,85.5 L500,79.8 L500,175 L40,175 Z" fill="url(#gRev)"/>
+            <path d="M40,106.4 L132,100.7 L224,96.9 L316,91.2 L408,85.5 L500,79.8 L500,13.1 L408,22.8 L316,32.5 L224,42.2 L132,48.7 L40,58.4 Z" fill="url(#gGp)"/>
+            <path d="M40,106.4 L132,100.7 L224,96.9 L316,91.2 L408,85.5 L500,79.8" fill="none" stroke="#0c8484" stroke-width="2"/>
+            <path d="M40,58.4 L132,48.7 L224,42.2 L316,32.5 L408,22.8 L500,13.1" fill="none" stroke="#d99433" stroke-width="1.5" stroke-opacity=".7"/>
+            <g fill="#93a2a6" font-size="10" font-family="DM Sans,sans-serif" text-anchor="middle">
+              <text x="40" y="192">Jul</text><text x="132" y="192">Aug</text><text x="224" y="192">Sep</text><text x="316" y="192">Oct</text><text x="408" y="192">Nov</text><text x="500" y="192">Dec</text>
+            </g>
+          </svg>
+          <div class="dlegend"><span><i style="background:#0c8484"></i>Revenue</span><span><i style="background:#f0a94b"></i>Gross Profit</span></div>
+        </div>
+
+        <div class="dchart">
+          <h6>Revenue by Channel</h6>
+          <div class="dsub">Share of revenue across sales channels</div>
+          <svg viewBox="0 0 140 140" role="img" aria-label="Revenue by channel" style="max-width:170px;margin:0 auto">
+            <circle cx="70" cy="70" r="52" fill="none" stroke="#eef2f2" stroke-width="22"/>
+            <circle cx="70" cy="70" r="52" fill="none" stroke="#0c8484" stroke-width="22" stroke-dasharray="169.9 156.8" transform="rotate(-90 70 70)"/>
+            <circle cx="70" cy="70" r="52" fill="none" stroke="#29c4a9" stroke-width="22" stroke-dasharray="80.7 246" transform="rotate(97.2 70 70)"/>
+            <circle cx="70" cy="70" r="52" fill="none" stroke="#f0a94b" stroke-width="22" stroke-dasharray="46.4 280.3" transform="rotate(186.1 70 70)"/>
+            <circle cx="70" cy="70" r="52" fill="none" stroke="#6b9295" stroke-width="22" stroke-dasharray="27.4 299.3" transform="rotate(237.3 70 70)"/>
+            <text x="70" y="67" text-anchor="middle" font-family="Fraunces,serif" font-size="17" fill="#22343a">£4.2M</text>
+            <text x="70" y="83" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#5f7176" letter-spacing="1">REVENUE</text>
+          </svg>
+          <div class="dlegend"><span><i style="background:#0c8484"></i>Online (D2C) 52%</span><span><i style="background:#29c4a9"></i>Marketplace 24.7%</span><span><i style="background:#f0a94b"></i>Wholesale 14.2%</span><span><i style="background:#6b9295"></i>Retail 8.4%</span></div>
+        </div>
+      </div>
+
+      <div class="dflow">
+        <h6>Channel → Region Flow</h6>
+        <div class="dsub">Revenue flow from sales channels to geographic regions</div>
+        <svg id="sankey" viewBox="0 0 520 240" role="img" aria-label="Channel to region revenue flow"></svg>
+      </div>
+    </div>
+  </div>
+  <div class="dash-cap">Illustrative example — each client's live dashboard is built on their own connected data.</div>
+</div>
+
 <!-- ── HOW THE POC WORKS ──────────────────────────────── -->
 <div class="section reveal" style="padding-top:0">
   <div class="sec-label">The Proof of Concept</div>
@@ -487,6 +592,31 @@ h1 .hl{color:transparent;background:linear-gradient(90deg,var(--teal),var(--mint
   const items=['Salesforce','HubSpot','Klaviyo','GA4','Meta Ads','TikTok','LinkedIn','Google Ads','Search Console','YouTube','Instagram','Blended CAC & LTV','Multi-touch attribution','Plain-English Q&A','Slack & WhatsApp','700+ integrations'];
   const t=document.getElementById('ticker');
   [...items,...items].forEach(txt=>{const s=document.createElement('span');s.className='ticker-item';s.innerHTML='<span class="t-dot"></span>'+txt;t.appendChild(s);});
+})();
+
+/* ── SANKEY FLOW ─────────────────────────────── */
+(function(){
+  const svg=document.getElementById('sankey');if(!svg)return;
+  const ns='http://www.w3.org/2000/svg';
+  const W=520,H=240,pad=12,nodeW=11,gap=8;
+  const left=[{n:'Online (D2C)',v:2.18,c:'#0c8484'},{n:'Marketplace',v:1.04,c:'#29c4a9'},{n:'Wholesale',v:0.60,c:'#f0a94b'},{n:'Retail',v:0.35,c:'#6b9295'}];
+  const right=[{n:'North America',v:2.28,c:'#9aa9ae'},{n:'Asia',v:1.17,c:'#9aa9ae'},{n:'Europe',v:0.72,c:'#9aa9ae'}];
+  const links=[{s:0,t:0,v:1.25},{s:0,t:1,v:0.63},{s:0,t:2,v:0.30},{s:1,t:0,v:0.55},{s:1,t:1,v:0.34},{s:1,t:2,v:0.15},{s:2,t:0,v:0.32},{s:2,t:1,v:0.12},{s:2,t:2,v:0.16},{s:3,t:0,v:0.16},{s:3,t:1,v:0.08},{s:3,t:2,v:0.11}];
+  const total=left.reduce((a,b)=>a+b.v,0);
+  const scale=(H-2*pad-gap*(left.length-1))/total;
+  function layout(nodes,x){let y=pad;nodes.forEach(nd=>{nd.h=nd.v*scale;nd.x=x;nd.y=y;nd.oy=y;nd.iy=y;y+=nd.h+gap;});}
+  layout(left,pad);layout(right,W-pad-nodeW);
+  function el(t,a){const e=document.createElementNS(ns,t);for(const k in a)e.setAttribute(k,a[k]);return e;}
+  links.forEach(lk=>{
+    const L=left[lk.s],R=right[lk.t],lh=lk.v*scale;
+    const x0=L.x+nodeW,x1=R.x,xm=(x0+x1)/2,ay=L.oy,by=R.iy;
+    const d=`M${x0},${ay} C${xm},${ay} ${xm},${by} ${x1},${by} L${x1},${by+lh} C${xm},${by+lh} ${xm},${ay+lh} ${x0},${ay+lh} Z`;
+    svg.appendChild(el('path',{d,fill:L.c,'fill-opacity':'.30'}));
+    L.oy+=lh;R.iy+=lh;
+  });
+  [...left,...right].forEach(nd=>svg.appendChild(el('rect',{x:nd.x,y:nd.y,width:nodeW,height:Math.max(1,nd.h),rx:2,fill:nd.c})));
+  left.forEach(nd=>{const t=el('text',{x:nd.x+nodeW+7,y:nd.y+nd.h/2+3,'font-size':'10.5','font-family':'DM Sans,sans-serif',fill:'#37474a'});t.textContent=`${nd.n} (£${nd.v.toFixed(2)}M)`;svg.appendChild(t);});
+  right.forEach(nd=>{const t=el('text',{x:nd.x-7,y:nd.y+nd.h/2+3,'font-size':'10.5','font-family':'DM Sans,sans-serif','text-anchor':'end',fill:'#37474a'});t.textContent=`${nd.n} (£${nd.v.toFixed(2)}M)`;svg.appendChild(t);});
 })();
 
 /* ── SCROLL REVEAL ───────────────────────────── */
